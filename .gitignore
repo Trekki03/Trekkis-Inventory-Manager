@@ -50,5 +50,7 @@ buildNumber.properties
 
 ### From Me ###
 .settings/*
+.classpath
+.project
 
 # End of https://www.toptal.com/developers/gitignore/api/java,vscode,maven

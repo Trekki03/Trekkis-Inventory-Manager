@@ -27,7 +27,10 @@ import java.util.zip.GZIPOutputStream;
  * <p>
  * Check out https://bStats.org/ to learn more about bStats!
  */
-@SuppressWarnings({"WeakerAccess", "unused"})
+
+//Disabled @SupressWarning because is triggers a warning in the IDE
+
+//@SuppressWarnings({"WeakerAccess", "unused"})
 public class Metrics {
 
     static {
