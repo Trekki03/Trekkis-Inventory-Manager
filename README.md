@@ -11,12 +11,14 @@ The plugin is designed and testes in version 1.15.1 and 1.15.2
 /loadinv [saved player] [replace inventory (true/false)]
 Permission: tim.load - default: op
 - Loads the inventory data of a saved file. You can choose if your inventory gets replaced or the loaded data is shown in a chest like inventory. With no arguments you invenory didn't get replaced.
+- Attention, this command uses the MojangAPI. If you use it more than 600 times in 10 minutes, your ip can get banned from the MojangAPI. This has an impact on all plugins using the Mojang API. (No safty feature implemented yet)
 /seeinv <Online Player> [interact true/false]
-Permission: tim.see - default: op
-Let you see and interact with the targets inventory. You can choose if items get removed of the targets inventory. With no Argument you only see the inventory.
+- Permission: tim.see - default: op
+- Let you see and interact with the targets inventory. You can choose if items get removed of the targets inventory. With no Argument you only see the inventory.
 /seeend <Online Player> [interact true/false]
-Permission: tim.end - default: op
-Let you see and interact with the targets enderchest. You can choose if items get removed of the targets enderchest. With no Argument you only see the enderchest.
+- Permission: tim.end - default: op
+- Let you see and interact with the targets enderchest. You can choose if items get removed of the targets enderchest. With no Argument you only see the enderchest.
+
 Permissions:
 
 All permissions have the prefix tim (**T**rekkis **I**nventory **M**anager).

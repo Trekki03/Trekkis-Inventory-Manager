@@ -5,11 +5,14 @@ import de.trekki03.trekkisinventorymanager.commands.SaveInventoryCommand;
 import de.trekki03.trekkisinventorymanager.commands.SeeEnderchestCommand;
 import de.trekki03.trekkisinventorymanager.commands.SeeInventoryCommand;
 import de.trekki03.trekkisinventorymanager.utility.Language;
-import de.trekki03.trekkisinventorymanager.utility.Metrics;
+import de.trekki03.trekkisinventorymanager.bstats.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 
+/**
+ * main class of the plugin
+ */
 public class Main extends JavaPlugin 
 {
 
@@ -20,21 +23,20 @@ public class Main extends JavaPlugin
     @Override
     public void onEnable() {
 
-        //instanciate static objects
+        //instantiate static objects
         plugin = this;
         lang = new Language();
 
         //start bStats
         Metrics metrics = new Metrics(plugin, 6317);
         
-        //TODO Add lang for bStats messages
         if(metrics.isEnabled())
         {
-            getServer().getConsoleSender().sendMessage(ChatColor.GREEN + "bStats started");
+            getServer().getConsoleSender().sendMessage(lang.getConsolePrefix() + ChatColor.GREEN + lang.getText("consoleMessage.bStatsLoaded"));
         }
         else
         {
-            getServer().getConsoleSender().sendMessage(ChatColor.YELLOW + "bStats failed to start");
+            getServer().getConsoleSender().sendMessage(lang.getConsolePrefix() + ChatColor.YELLOW + lang.getText("consoleMessage.bStatsNotLoaded"));
         }
         
         //classes with objects for event registration
@@ -52,14 +54,13 @@ public class Main extends JavaPlugin
         getCommand("seeend").setExecutor(seeend);
 
         //send plugin loaded Message
-        getServer().getConsoleSender().sendMessage(ChatColor.GREEN + lang.getText("consoleMessage.load"));
-
+        getServer().getConsoleSender().sendMessage(lang.getConsolePrefix() + ChatColor.GREEN + lang.getText("consoleMessage.load"));
     }
 
     @Override
     public void onDisable()
     {
         //send plugin unloaded Message
-        getServer().getConsoleSender().sendMessage(ChatColor.GREEN + lang.getText("consoleMessage.unload"));
+        getServer().getConsoleSender().sendMessage(lang.getConsolePrefix() + ChatColor.GREEN + lang.getText("consoleMessage.unload"));
     }
 }

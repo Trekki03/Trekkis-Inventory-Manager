@@ -1,4 +1,4 @@
-package de.trekki03.trekkisinventorymanager.utility;
+package de.trekki03.trekkisinventorymanager.bstats;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;

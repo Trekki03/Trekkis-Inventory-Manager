@@ -5,7 +5,6 @@ author: Trekki03
 description: The plugin contains inventory management for administrators and backpacks / team backpacks for normal users.
 
 version: 1.0.0
-api-version: 1.16
 
 commands:
   saveinv:
@@ -36,7 +35,7 @@ commands:
 permissions:
   tim.save:
     description: Allows usage of /saveinv command
-    default:
+    default: op
 
   tim.load:
     description: Allows usage of /loadinv command
