@@ -53,5 +53,5 @@ buildNumber.properties
 .classpath
 .project
 Todo.txt
-
+*.code-workspace
 # End of https://www.toptal.com/developers/gitignore/api/java,vscode,maven
